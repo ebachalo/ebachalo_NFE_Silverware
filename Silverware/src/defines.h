@@ -232,15 +232,3 @@
 #define	MFILT1_HZ_460	0.825618
 #define	MFILT1_HZ_480	0.827956
 #define	MFILT1_HZ_500	0.836544
-
-
-
-
-
-
-
-
-
-
-
-

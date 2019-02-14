@@ -1,4 +1,21 @@
-[![Build Status](https://travis-ci.org/silver13/BoldClash-BWHOOP-B-03.svg?branch=master)](https://travis-ci.org/silver13/BoldClash-BWHOOP-B-03)
+# ebachalo fork of NFE_Silverware fork of BoldClash-BWHOOP-B-03 fork of Siverware
+
+## Main Objective to decrease looptime
+
+To achieve this goal all floats and float operations will be converted to fixed point binaries and fixed point arithmetic.
+<http://www-inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html>
+
+Because the stm32f030xx mcu does have a floating point unit (FPU) a floating point multiply takes anywhere from 60 to 100 cpu cycles _need to find reference again_.
+A floating point addition takes a handful of cpu cycles.
+
+
+Because the stm32f030xx mcu can do a 16bit x 16bit multiply into a 32bit value in a sincle cycle a 32 bit fixed point multiply would take less than 10 cpu cycles.
+Binary floating point addition and subtraction of same point location numbers takes a single cpu cycle.
+
+
+_end of ebachalo notes_
+
+
 
 ## NotFastEnuf Notes - Bwhoop B03 Silverware modified to work on BWHOOP, E011, or H8mini_blue_board.
 Last major update 9.11.18

@@ -1,5 +1,3 @@
-
-
 #include <stdbool.h>
 #include "pid.h"
 #include "util.h"
@@ -11,12 +9,12 @@
 //**************************** ANGLE PIDS - used in level mode to set leveling strength
 
 
-//HIGH LEVELING STRENGTH angle settings                       
-//float apidkp[APIDNUMBER] = { 13.00 };  // Kp ROLL + PITCH 
-//float apidkd[APIDNUMBER] = { 5.0 };    // Kd ROLL + PITCH 
+//HIGH LEVELING STRENGTH angle settings
+//float apidkp[APIDNUMBER] = { 13.00 };  // Kp ROLL + PITCH
+//float apidkd[APIDNUMBER] = { 5.0 };    // Kd ROLL + PITCH
 
-//NotFastEnuf personal settings                       
-float apidkp[APIDNUMBER] = { 5.00 };  // Kp ROLL + PITCH 
+//NotFastEnuf personal settings
+float apidkp[APIDNUMBER] = { 5.00 };  // Kp ROLL + PITCH
 float apidkd[APIDNUMBER] = { 0.0 };    // Kd ROLL + PITCH
 
 
@@ -48,10 +46,10 @@ float apid(int x)
 	apidoutput[x] = angleerror[x] * apidkp[0];
 
 
-extern float timefactor;
-      
-    apidoutput[x] = apidoutput[x] + (angleerror[x] - lasterror[x]) * apidkd[0] * timefactor;
-    lasterror[x] = angleerror[x];
+	extern float timefactor;
+
+	apidoutput[x] = apidoutput[x] + (angleerror[x] - lasterror[x]) * apidkd[0] * timefactor;
+	lasterror[x] = angleerror[x];
 
 	limitf(&apidoutput[x], OUTLIMIT_FLOAT);
 

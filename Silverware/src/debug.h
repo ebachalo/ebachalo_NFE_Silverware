@@ -1,15 +1,10 @@
 
 
-typedef struct debug
-{
+typedef struct debug {
 	int gyroid;
 	float vbatt_comp;
 	float adcfilt;
-	float totaltime;	
+	float totaltime;
 	float timefilt;
-    float adcreffilt;
+	float adcreffilt;
 } debug_type;
-
-
-
-
